@@ -1,0 +1,69 @@
+<ion-header>
+    <ion-navbar color="myTheme">
+        <!-- TO display back button for respective platforms -->
+
+        <div showWhen="ios">
+           <button (click)="goBack()" class="back-button disable-hover bar-button bar-button-ios back-button-ios bar-button-default bar-button-default-ios show-back-button" ion-button="bar-button" ng-reflect-klass="back-button" ng-reflect-ng-class="back-button-ios" ng-reflect-hidden="false"><span class="button-inner"><span class="button-inner"><ion-icon class="back-button-icon icon-ios back-button-icon-ios ion-ios-arrow-back" role="img" ng-reflect-klass="back-button-icon" ng-reflect-ng-class="back-button-icon-ios" aria-label="arrow back" ng-reflect-name="ios-arrow-back"></ion-icon><span class="back-button-text back-button-text-ios" ng-reflect-klass="back-button-text" ng-reflect-ng-class="back-button-text-ios" style="transform: translateX(0px);">Back</span></span></span><div class="button-effect"></div></button>
+            <ion-title>
+            
+            </ion-title>
+        </div>
+      
+        <div showWhen="android">
+            <ion-row>
+               <button (click)="goBack()" class="back-button disable-hover bar-button bar-button-md back-button-md bar-button-default bar-button-default-md show-back-button" ion-button="bar-button" ng-reflect-klass="back-button" ng-reflect-ng-class="back-button-md" ng-reflect-hidden="false"><span class="button-inner"><span class="button-inner"><ion-icon class="back-button-icon icon-md back-button-icon-md ion-md-arrow-back" role="img" ng-reflect-klass="back-button-icon" ng-reflect-ng-class="back-button-icon-md" aria-label="arrow back" ng-reflect-name="md-arrow-back"></ion-icon><span class="back-button-text back-button-text-md" ng-reflect-klass="back-button-text" ng-reflect-ng-class="back-button-text-md"></span></span></span><div class="button-effect"></div></button>
+                <ion-title>
+                  
+                </ion-title>
+            </ion-row>
+        </div>
+        
+    
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="products" (swipeleft)="swipeLeft($event)" (swipeRight)="swipeRight($event)">
+
+    <!--To display filter that filters Veg and Non-Veg items in list
+    @Param  {boolean} onlyVeg
+    -->
+
+    <ion-item>
+        <ion-label> Show Only Veg</ion-label>
+        <ion-toggle color="secondary" [(ngModel)]="onlyVeg" checked="false" (ionChange)="filter()"></ion-toggle>
+    </ion-item>
+
+    <!--To list the products under the sub-menu
+        @param  {Array}     products    Array of products from json data
+        @param  {string}    image       Image of the product
+        @param  {string}    indicator   Image for Veg or Non-veg indicator of a product
+        @param  {string}    title       Name of the product
+        @param  {number}    price       Price of the product
+        @param  {string}    desc    Description of the product
+    -->
+    <div *ngFor="let prod of products">
+        <ion-card (click)="openProduct(prod)">
+            <ion-grid>
+                <ion-row>
+                    <ion-col width-50>
+                        <img data-src="{{prod.image}}"/>
+                    </ion-col>
+                    <ion-col center width-50>
+                        <ion-grid>
+                            <ion-row>
+                                <ion-col width-10 center>
+                                    <img class="indicator" data-src="{{prod.indicator}}"/>
+                                </ion-col>
+                                <ion-col width-90>
+                                    <span class="prod-title">{{prod.title}} </span>
+                                </ion-col>
+                            </ion-row>
+                        </ion-grid>
+                        <p class="prod-price">Price: ${{prod.price}}</p>
+                        <p class="prod-desc"> {{prod.desc}} </p>
+                    </ion-col>
+                </ion-row>
+            </ion-grid>
+        </ion-card>
+    </div>
+</ion-content>

@@ -1,0 +1,44 @@
+.myTabs .tabbar {
+  overflow-x: scroll;
+  background: map_get($colors, myTheme);
+  display: flex;
+}
+
+.myTabs .tab-button {
+  padding: 0;
+  word-wrap: normal;
+  @media screen and (min-width: 320px) {
+    min-width: 5.5em;
+  }
+}
+
+.tabs-ios .tabbar {
+  justify-content: initial;
+}
+
+.tabs-md .tab-button[aria-selected=true] .tab-button-text {
+  color: #080000;
+}
+
+.tabs-md[tabsLayout=icon-hide] .tab-button, .tabs-md[tabsLayout=title-hide] .tab-button, .tabs-md .tab-button.icon-only, .tabs-md .tab-button.has-title-only {
+  padding: 0;
+}
+
+.tabs-wp[tabsLayout=icon-hide] .tab-button, .tabs-wp[tabsLayout=title-hide] .tab-button, .tab-button.icon-only, .tab-button.has-title-only {
+  padding: 0;
+}
+
+.tabs-ios-myTheme .tabbar .tab-button[aria-selected=true] {
+  color: black;
+}
+
+/*
+.scroll-bar-indicator {
+  display: none;
+}*/
+
+.myTabs .tab-button-text {
+  @media (max-width: 350px) {
+    font-size: 1.2rem;
+  }
+}

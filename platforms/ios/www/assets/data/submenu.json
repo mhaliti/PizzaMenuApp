@@ -1,0 +1,93 @@
+{
+  "subMenuOptions": [
+    {
+      "id":1,
+      "typeId": 1,
+      "image": "assets/img/submenu/salads.jpg",
+      "icon":"assets/img/icon/cereal.svg",
+      "title": "Salads",
+      "noOfItems": 5
+    },
+    {
+      "id":2,
+      "typeId": 1,
+      "image": "assets/img/submenu/appetizer.jpg",
+      "icon":"assets/img/icon/tiffin.svg",
+      "title": "Appetizers",
+      "noOfItems": 5
+    },
+    {
+      "id":3,
+      "typeId": 1,
+      "image": "assets/img/gifs/pizza2.gif",
+      "icon":"assets/img/icon/roti.svg",
+      "title": "Pizza",
+      "noOfItems": 5
+    },
+    {
+      "id":4,
+      "typeId": 1,
+      "image": "assets/img/submenu/pasta.jpeg",
+      "icon":"assets/img/icon/bread.svg",
+      "title": "Pasta",
+      "noOfItems": 5
+    },
+    {
+      "id":5,
+      "typeId": 1,
+      "image": "assets/img/submenu/chicken.jpg",
+      "icon":"assets/img/icon/pancake.svg",
+      "title": "Chicken",
+      "noOfItems": 5
+    },
+    {
+      "id":6,
+      "typeId": 1,
+      "image": "assets/img/submenu/hotsub.jpg",
+      "icon":"assets/img/icon/sweets.svg",
+      "title": "Hot Subs",
+      "noOfItems": 5
+    },
+    {
+      "id":7,
+      "typeId": 1,
+      "image": "assets/img/submenu/coldsub.jpg",
+      "icon":"assets/img/icon/soup.svg",
+      "title": "Cold Subs",
+      "noOfItems": 5
+    },
+    {
+      "id":8,
+      "typeId": 1,
+      "image": "assets/img/submenu/kids.jpg",
+      "icon":"assets/img/icon/salads.svg",
+      "title": "Kids Menu",
+      "noOfItems": 5
+    },
+    {
+      "id":9,
+      "typeId": 1,
+      "image": "assets/img/gifs/cake2.gif",
+      "icon":"assets/img/icon/starters.svg",
+      "title": "Deserts",
+      "noOfItems": 5
+    },
+    {
+      "id":10,
+      "typeId": 1,
+      "image": "assets/img/submenu/sideorders.jpeg",
+      "icon":"assets/img/icon/bread.svg",
+      "title": "Side Orders",
+      "noOfItems": 5
+    },
+ 
+    {
+      "id":11,
+      "typeId": 1,
+      "image": "assets/img/gifs/drinks.gif",
+      "icon":"assets/img/icon/softdrinks.svg",
+      "title": "Drinks",
+      "noOfItems": 5
+    }
+  ]
+}

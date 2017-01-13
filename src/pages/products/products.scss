@@ -1,0 +1,54 @@
+ion-navbar{
+  height: 44px;
+}
+.products {
+  ion-grid {
+    padding: 0 0 5px 0;
+    ion-col {
+      padding: 0;
+      img {
+        padding-right: 5px;
+        height: inherit;
+      }
+      p {
+        line-height: 1.5em;
+      }
+      .indicator{
+        width:1.2em;
+        height:0.8em;
+      }
+      .prod-title {
+        color: map_get($colors, myTheme);
+        font-size: larger;
+        font-weight: bold;
+        text-transform: capitalize;
+        @media screen and (min-width: 700px) {
+          font-size: x-large;
+        }
+      }
+      .prod-price {
+        color: darken(map_get($colors, myTheme), 40%);
+        font-size: medium;
+        @media screen and (min-width: 700px) {
+          font-size: larger;
+        }
+      }
+      .prod-desc {
+        display: inline-block;
+        width: 100%;
+        white-space: nowrap;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        @media screen and (min-width: 700px) {
+          white-space: nowrap;
+          height: 100%;
+          line-height: 1.5em;
+          overflow: hidden !important;
+        }
+      }
+    }
+  }
+  .hideNavBar{
+    display: none;
+  }
+}

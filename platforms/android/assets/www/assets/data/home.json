@@ -1,0 +1,20 @@
+{
+  "banners": [
+    {
+      "image": "assets/img/banner/home.jpg"
+    
+    },
+     {
+      "image": "assets/img/banner/Pizza.jpg"
+    
+    }
+  ],
+  "menus": [
+    {
+      "id": 1,
+      "image": "assets/img/menu/menu.png",
+      "title": "Menu"
+    }
+  ]
+}
+

@@ -1,0 +1,123 @@
+.prodView {
+  .prod-Slide {
+    height: 50%;
+    .slide-zoom {
+      height: 100%;
+      img {
+        height: inherit;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+      }
+      .price-tag {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+        color: #eee;
+        font-size: 2em;
+        width: 1.75em;
+        a {
+          font-size: large;
+          text-align: center;
+          color: map-get($colors, myFont);
+        }
+        &:after {
+          content: "";
+          font-size: 0.5em;
+          position: absolute;
+          height: 2.2em;
+          border: 1.75em solid map-get($colors, secondary);
+          z-index: -1;
+          top: -1em;
+          border-top-width: 2em;
+          border-bottom-color: transparent;
+          left: 0;
+        }
+      }
+    }
+  }
+  .prod-heading {
+    padding-top: 5px;
+    padding-bottom: 10px;
+  }
+  .prod-indicator {
+    width: 1em;
+  }
+  .prod-title {
+    color: map_get($colors, myTheme);
+    font-size: large;
+    font-weight: bold;
+    text-transform: capitalize;
+    @media screen and (max-width: 350px) {
+      font-size: large;
+    }
+    @media screen and (min-width: 700px) {
+    font-size: xx-large;
+  }
+  }
+  .prod-price {
+    color: darken(map_get($colors, myTheme), 40%);
+    font-size: large;
+    font-family: serif;
+    @media screen and (max-width: 350px) {
+      font-size: medium;
+    }
+    @media screen and (min-width: 700px) {
+      font-size: x-large;
+    }
+  }
+
+  .sub-heading {
+    padding-left: 5px;
+    padding-top: 7px;
+    margin-bottom: 0;
+    border-top: thin solid #e8e8e8;
+    color: adjust_hue(map-get($colors, myTheme), 10%);
+    @media screen and (min-width: 700px) {
+      font-size: x-large;
+      padding-top: 15px;
+      padding-bottom: 10px;
+    }
+  }
+  ion-grid {
+    ion-row {
+      height: 2.6em;
+      @media screen and (min-width: 700px) {
+        height: 3em;
+      }
+      .addons-data {
+        padding: 0;
+        text-transform: capitalize;
+        ion-label{
+          @media screen and (min-width: 700px) {
+            font-size: larger;
+          }
+        }
+        ion-checkbox{
+          @media screen and (min-width: 700px) {
+            font-size: larger;
+          }
+        }
+        .prod-addon-price {
+          padding-right: 5px;
+          @media screen and (min-width: 700px) {
+            font-size: larger;
+          }
+        }
+      }
+    }
+  }
+
+  .prod-desc {
+    p {
+      margin: 5px;
+      text-align: justify;
+      @media screen and (min-width: 700px) {
+        font-size: larger;
+      }
+    }
+  }
+}
+

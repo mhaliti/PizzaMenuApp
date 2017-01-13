@@ -1,0 +1,24 @@
+<ion-header>
+    <ion-navbar color="myTheme">
+        <ion-title>
+            Welcome
+        </ion-title>
+        <ion-buttons end>
+            <button ion-button class="img-gallery" *ngFor="let menu of menus" clear (click)="openMenu(menu)">
+                    <ion-icon name="menu"></ion-icon>
+                </button>
+        </ion-buttons>
+    </ion-navbar>
+</ion-header>
+
+<ion-content padding class="home has-footer">
+
+    <ion-slides class="banner" [options]="bannerOptions">
+        <ion-slide *ngFor="let banner of banners">
+            <img data-src="{{banner.image}}" slide-lazy>
+        </ion-slide>
+    </ion-slides>
+ 
+     
+
+</ion-content>

@@ -1,0 +1,30 @@
+<ion-header>
+    <ion-navbar color="myTheme">
+        <ion-title>
+      
+        </ion-title>
+        
+    </ion-navbar>
+</ion-header>
+<ion-content padding class="submenu">
+
+    <!--Displays the submenu of the menu
+        @param  {string}    image       Image of the product
+        @param  {string}    icon        Icon image for the product
+        @param  {string}    title       Name of the product
+        @param  {number}    noOfItems   No of items in the product
+    -->
+    <ion-list [virtualScroll]="submenus">
+        <ion-item *virtualItem="let menu;let i = index">
+            <ion-card class="submenu-card" (click)="openSubMenu(i)">
+                <img data-src="{{menu.image}}"/>
+                <button ion-button clear class="sidebar-color checking-{{i}}"></button>
+                <button ion-button clear class="sidebar-icon">
+                    <ion-img class="menu-icon" data-src="{{menu.icon}}"></ion-img>
+                </button>
+                <div class="card-title">{{menu.title}}</div>
+                <div class="card-subtitle">{{menu.noOfItems}} items</div>
+            </ion-card>
+        </ion-item>
+    </ion-list>
+</ion-content>

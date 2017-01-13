@@ -1,0 +1,75 @@
+<ion-header>
+    <ion-navbar color="myTheme">
+        <ion-title>
+    
+        </ion-title>
+        
+    </ion-navbar>
+</ion-header>
+<ion-content padding class="prodView">
+
+    <!--Displays the slide of images of product
+    @param  {Array}    images   Array of product images
+    @param  {string}   title    Image title of product
+    @param  {number}   price    Price of the product
+    -->
+
+    <ion-slides class="prod-Slide" [options]="slideOptions">
+        <ion-slide *ngFor="let image of product.images">
+            <img data-src="{{image.title}}" slide-lazy/>
+            <span class="price-tag"><a>${{price}}</a></span>
+        </ion-slide>
+    </ion-slides>
+
+
+    <!--Displays the heading of the product
+        @param  {string}    indicator   Veg or Non-veg indicator of the product
+        @param  {string}    title       Title of the product
+        @param  {number}   price    Price of the product
+    -->
+    <ion-grid class="prod-heading">
+        <ion-row>
+            <ion-col width-80 center>
+                <img class="prod-indicator" data-src="{{product.indicator}}"/>
+                <span class="prod-title">{{product.title}} </span>
+            </ion-col>
+            <ion-col width-20 center>
+                <span class="prod-price">${{price}}</span>
+            </ion-col>
+        </ion-row>
+    </ion-grid>
+
+
+    <!--Displays if add-pns available for the product
+        @param  {Array}    add-ons          Products add-ons
+        @param  {string}   add_ons_name     Name of the product add_ons
+        @param  {number}   add_ons_price    Price of the product add_ons
+    -->
+    <div *ngIf="product.add_ons">
+        <h5 class="sub-heading">Add-Ons Available</h5>
+        <ion-grid>
+            <div *ngFor="let adds of product.add_ons">
+                <ion-row>
+                    <ion-col class="addons-data" width-80 center>
+                        <ion-item no-lines>
+                            <ion-label>{{adds.add_ons_name}}</ion-label>
+                            <ion-checkbox color="myTheme" ([ngModel])="adds.checked" (ionChange)="add(adds)"></ion-checkbox>
+                        </ion-item>
+                    </ion-col>
+                    <ion-col class="addons-data" width-20 center>
+                        <span class="prod-addon-price">${{adds.add_ons_price}}</span>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-grid>
+    </div>
+
+    <!--Description of the product
+    @param  {string}    desc          Products description
+    -->
+    <div class="prod-desc">
+        <h5 class="sub-heading">Description</h5>
+        <p> {{product.desc}}</p>
+    </div>
+
+</ion-content>
